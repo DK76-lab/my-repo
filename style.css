@@ -1,0 +1,276 @@
+
+/* Основная страница */
+
+body {
+    background-color: #101827;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Главная карточка */
+
+.card {
+    background-color: #1e293b;
+
+    padding: 40px;
+    border-radius: 20px;
+
+    width: 420px;
+    max-width: calc(100% - 32px);
+
+    box-sizing: border-box;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Заголовок */
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* Описание */
+
+p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+/* Поле ввода */
+
+input {
+    width: 100%;
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+
+/* Основная кнопка */
+
+button {
+    background-color: #6366f1;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 14px 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#addTaskBtn {
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4f46e5;
+}
+
+
+/* Список задач */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+
+/* Отдельная задача */
+
+li {
+    background-color: #334155;
+
+    padding: 12px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-align: left;
+}
+
+
+/* Текст задачи */
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* Кнопка выполнения */
+
+.done-btn {
+    background-color: #059669;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.done-btn:hover {
+    background-color: #047857;
+}
+
+
+/* Кнопка удаления */
+
+.delete-btn {
+    background-color: #dc2626;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* Выполненная задача */
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* Статистика задач */
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #334155;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+#completedTasks {
+    color: #4ade80;
+}
+
+
+/* Фильтры */
+
+.filters {
+    display: flex;
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.filter-btn {
+    flex: 1;
+
+    padding: 10px 5px;
+
+    font-size: 12px;
+
+    background-color: #334155;
+}
+
+.filter-btn:hover {
+    background-color: #475569;
+}
+
+/* Выбранный фильтр */
+
+.filter-btn.active {
+    background-color: #6366f1;
+    color: white;
+}
+
+/* Фон индикатора */
+
+.progress {
+    width: 100%;
+    height: 12px;
+
+    background-color: #334155;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+}
+
+/* Зелёная полоска */
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background-color: #22c55e;
+
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+/* Текст прогресса */
+
+#progressText {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Кнопка редактирования */
+
+.edit-btn {
+    background-color: #0284c7;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.edit-btn:hover {
+    background-color: #0369a1;
+}
+
+/* Разрешаем элементам задачи переноситься */
+
+li {
+    flex-wrap: wrap;
+}
+
+.task-text {
+    flex-basis: 100%;
+}

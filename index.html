@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>TaskFlow 🚀</h1>
+
+        <p>Управляй своими задачами</p>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Напиши задачу..."
+        >
+
+        <button id="addTaskBtn">
+            Добавить
+        </button>
+        
+<div class="stats">
+
+    <span id="totalTasks">Всего: 0</span>
+
+    <span id="completedTasks">Выполнено: 0</span>
+
+</div>
+
+<!-- Индикатор прогресса -->
+
+<div class="progress">
+
+    <div id="progressBar" class="progress-bar"></div>
+
+</div>
+
+<p id="progressText">0% выполнено</p>
+<div class="filters">
+
+    <button class="filter-btn active" data-filter="all">
+        Все
+    </button>
+
+    <button class="filter-btn" data-filter="active">
+        Активные
+    </button>
+
+    <button class="filter-btn" data-filter="completed">
+        Выполненные
+    </button>
+
+</div>
+        <ul id="taskList"></ul>
+
+    </div>
+
+</body>
+
+</html>
